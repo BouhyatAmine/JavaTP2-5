@@ -1,2 +1,2 @@
 # JavaTP2-5
-test
+**Objective**: Develop a Client-Server Chat application, in UDPand TCP
