@@ -26,3 +26,4 @@ This Java program implements a basic UDP (User Datagram Protocol) server. It lis
    ```bash
    javac UDPServer.java
 
+You can modify the **BUFF_SIZE** and **DEFAULT_PORT** constants in the code according to your requirements.
