@@ -31,7 +31,7 @@ public class TCPMultiServer {
                 connectionThread.start();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
@@ -43,7 +43,7 @@ public class TCPMultiServer {
 
 
     public static void main(String[] args) {
-        TCPMultiServer multiServer = new TCPMultiServer();
+        TCPMultiServer multiServer = new TCPMultiServer(Integer.parseInt(args[0]));
         multiServer.launch();
     }
 }

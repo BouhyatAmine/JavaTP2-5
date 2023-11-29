@@ -14,14 +14,25 @@ public class TCPClient_1 {
             OutputStream out = socket.getOutputStream();
             PrintWriter writer = new PrintWriter(out, true);
 
+            Thread serverReaderThread = new Thread(() -> {
+                try {
+                    String response;
+                    while ((response = serverReader.readLine()) != null) {
+                        System.out.println("\nServer: " + response);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+            serverReaderThread.start();
+
             String message;
             while (true) {
                 System.out.print("Enter a message: ");
                 message = userInput.readLine();
-
                 writer.println(message);
-                String response = serverReader.readLine();
-                System.out.println(response);
+                //String response = serverReader.readLine();
+                //System.out.println(response);
             }
 
         } catch (IOException e) {
