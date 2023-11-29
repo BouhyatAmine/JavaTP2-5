@@ -27,6 +27,7 @@ This Java program implements a basic UDP (User Datagram Protocol) server. It lis
    java UDPServer 8080
 
 If no port is specified, the default port (8080) will be used.
+The server will start listening for UDP packets, and incoming messages will be printed to the console.
 You can modify the **BUFF_SIZE** and **DEFAULT_PORT** constants in the code according to your requirements.
 
 
