@@ -23,7 +23,7 @@ public class ConnectionThread extends Thread {
                 server.broadcast(message);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
