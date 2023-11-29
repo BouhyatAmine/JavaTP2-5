@@ -52,9 +52,13 @@ This Java program implements a simple UDP (User Datagram Protocol) client. It al
 3.The client will prompt you to enter messages. Type a message and press Enter to send it to the server:
    ```bash
    Please enter your messages here: Hello, UDP Server!
-
+   ```
 ### Notes
 
+The client runs in a loop, allowing you to continuously send messages to the server.
+The client sends messages to the specified server address and port using UDP.
 
+### Customisation
 
+You can modify the code to change the server address and port as needed.
    
