@@ -123,9 +123,11 @@ The client will continuously receive and print responses from the server.
 To exit the client, manually terminate the program (e.g., press Ctrl + C).
 
 **Notes**
+
 The client runs in a loop, allowing you to continuously send messages to the server and receive responses.
 
 The client uses a separate thread to read and print responses from the server, enabling concurrent communication.
 
 **Customization**
+
 You can modify the code to change the server address and port as needed.
