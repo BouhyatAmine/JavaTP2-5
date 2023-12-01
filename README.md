@@ -81,7 +81,10 @@ This Java program implements a simple TCP (Transmission Control Protocol) server
 
    ```bash
    javac TCPServer.java
-Run the server with a specified port (e.g., 8080).
+Run the server with a specified port (e.g., 8080):
+```bash
+java TCPServer 8080
+```
 
 The server will start listening for client connections. Each connected client can send messages to the server, and the server will print the received messages.
 
@@ -90,3 +93,39 @@ To stop the server, manually terminate the program (e.g., press Ctrl + C).
 **Customisation**
 
 You can modify the code to change the server port as needed.
+
+# TCP Client
+
+This Java program implements a simple TCP (Transmission Control Protocol) client. The client connects to a TCP server, sends messages to the server, and continuously receives and prints responses from the server.
+
+## Usage
+
+### Prerequisites
+
+- Java Development Kit (JDK) installed on your machine.
+
+### Running the Client
+
+1. Open a terminal or command prompt.
+
+2. Compile the Java program:
+
+   ```bash
+   javac TCPClient_1.java
+Run the client with the server address and port as command-line arguments:
+```bash
+java TCPClient_1 localhost 8080
+```
+The client will connect to the server and prompt you to enter a message. Type a message and press Enter to send it to the server.
+
+The client will continuously receive and print responses from the server.
+
+To exit the client, manually terminate the program (e.g., press Ctrl + C).
+
+**Notes**
+The client runs in a loop, allowing you to continuously send messages to the server and receive responses.
+
+The client uses a separate thread to read and print responses from the server, enabling concurrent communication.
+
+**Customization**
+You can modify the code to change the server address and port as needed.
