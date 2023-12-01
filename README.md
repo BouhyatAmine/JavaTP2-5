@@ -63,3 +63,30 @@ The client sends messages to the specified server address and port using UDP.
 
 You can modify the code to change the server address and port as needed.
    
+# TCP Server
+
+This Java program implements a simple TCP (Transmission Control Protocol) server. The server listens for incoming client connections, receives messages from connected clients, prints the received messages, and sends a response back to the clients.
+
+## Usage
+
+### Prerequisites
+
+- Java Development Kit (JDK) installed on your machine.
+
+### Running the Server
+
+1. Open a terminal or command prompt.
+
+2. Compile the Java program:
+
+   ```bash
+   javac TCPServer.java
+Run the server with a specified port (e.g., 8080).
+
+The server will start listening for client connections. Each connected client can send messages to the server, and the server will print the received messages.
+
+To stop the server, manually terminate the program (e.g., press Ctrl + C).
+
+**Customisation**
+
+You can modify the code to change the server port as needed.
