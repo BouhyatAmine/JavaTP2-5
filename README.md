@@ -137,3 +137,6 @@ The client uses a separate thread to read and print responses from the server, e
 **Customization**
 
 You can modify the code to change the server address and port as needed.
+
+# Remark reagarding the chat part:
+We weren't able to implement a chat bot due to a lack of time and skills; however the overall objective of the app is indeed accomplished and the Client-Server communication is well established in the interface.
