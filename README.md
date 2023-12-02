@@ -117,10 +117,11 @@ This Java program implements a simple TCP (Transmission Control Protocol) client
 
    ```bash
    javac TCPClient_1.java
-With the GUI:
-```bash
-javac TCPClient.java
-```
+   ```
+   With the GUI:
+   ```bash
+   javac TCPClient.java
+   ```
    
 3. Run the client with the server address and port as command-line arguments:
    ```bash
