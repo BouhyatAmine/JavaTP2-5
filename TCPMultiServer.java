@@ -35,7 +35,7 @@ public class TCPMultiServer {
         }
     }
 
-    public synchronized void broadcast(String message) {
+    public void broadcast(String message) {
         for (ConnectionThread thread : clientThreads) {
             thread.sendMessage(message);
         }

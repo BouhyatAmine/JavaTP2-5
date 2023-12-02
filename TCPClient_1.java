@@ -31,8 +31,6 @@ public class TCPClient_1 {
                 System.out.print("Enter a message: ");
                 message = userInput.readLine();
                 writer.println(message);
-                //String response = serverReader.readLine();
-                //System.out.println(response);
             }
 
         } catch (IOException e) {
