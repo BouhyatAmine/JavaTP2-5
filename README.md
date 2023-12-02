@@ -48,10 +48,10 @@ This Java program implements a simple UDP (User Datagram Protocol) client. It al
 
 1. Open a terminal or command prompt.
 
-2. Compile the Java program with the server address and port as command-line arguments:
+2. Compile the Java program:
    ```bash
    javac UDPClient.java
-Run the server with a specified port (e.g., 8080):
+Run the client with the server address and port as command-line arguments:
    ```bash
    java UDPClient localhost 8080
    ```
