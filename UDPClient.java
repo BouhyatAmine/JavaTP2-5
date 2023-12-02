@@ -17,6 +17,7 @@ public class UDPClient {
         try {
             DatagramSocket socket = new DatagramSocket();
             BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
+            System.out.print("Please enter your messages here: ");
             send(address, port, console, socket);
         } catch (IOException e) {
             e.printStackTrace();
