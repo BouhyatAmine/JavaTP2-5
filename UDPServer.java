@@ -62,9 +62,26 @@ public class UDPServer {
         return "The UDP Server is listening in port" + port;
     }
 
-    public static void main(String[] args) throws IOException {
-        UDPServer myUDPserver = new UDPServer(Integer.parseInt(args[0]));
-        System.out.println(myUDPserver);
-        myUDPserver.launch();
+    /**
+     * Launches a UDP server using the provided port number.
+     *
+     * @param args command-line arguments containing the server port.
+     */
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.err.println("Usage: java UDPServer <server_port>");
+            System.exit(1);
+        }
+
+        try {
+            int serverPort = Integer.parseInt(args[0]);
+            UDPServer myUDPserver = new UDPServer(serverPort);
+            System.out.println(myUDPserver);
+            myUDPserver.launch();
+        } catch (NumberFormatException e) {
+            System.err.println("Error: Invalid port number.");
+            System.exit(1);
+        }
     }
+
 }
