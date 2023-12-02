@@ -66,6 +66,7 @@ public class UDPServer {
      * Launches a UDP server using the provided port number.
      *
      * @param args command-line arguments containing the server port.
+     *             Usage: java UDPServer <server_port>
      */
     public static void main(String[] args) {
         if (args.length != 1) {

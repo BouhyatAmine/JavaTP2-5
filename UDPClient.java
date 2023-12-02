@@ -43,10 +43,30 @@ public class UDPClient {
         }
     }
 
+    /**
+     * The main entry point for the UDPClient application.
+     * Connects to a UDP server at the specified address and port, sending messages entered by the user.
+     *
+     * @param args command-line arguments containing the server address and port.
+     *             Usage: java UDPClient <server_address> <server_port>
+     * @throws IOException         if there is an error establishing a connection or sending messages.
+     * @throws NumberFormatException if the provided port number is not a valid integer.
+     */
     public static void main(String[] args) throws IOException {
-        String serverAddress = args[0];
-        int serverPort = Integer.parseInt(args[1]);
-        UDPClient client = new UDPClient();
-        client.connectAndSend(InetAddress.getByName(serverAddress), serverPort);
+        if (args.length != 2) {
+            System.err.println("Usage: java UDPClient <server_address> <server_port>");
+            System.exit(1);
+        }
+
+        try {
+            String serverAddress = args[0];
+            int serverPort = Integer.parseInt(args[1]);
+            UDPClient client = new UDPClient();
+            client.connectAndSend(InetAddress.getByName(serverAddress), serverPort);
+
+        } catch (NumberFormatException e) {
+            System.err.println("Error: Invalid port number.");
+            System.exit(1);
+        }
     }
 }
