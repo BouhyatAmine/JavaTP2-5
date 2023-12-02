@@ -1,7 +1,6 @@
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.InetAddress;
 import java.net.SocketException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
@@ -21,27 +20,40 @@ public class UDPServer {
         this(DEFAULT_PORT);
     }
 
+    /**
+     * Launches the UDP server, setting up a DatagramSocket to listen on the specified port.
+     * The server continuously receives incoming datagrams and processes them.
+     *
+     * @throws RuntimeException if there is an error initializing the DatagramSocket.
+     */
     public void launch() {
         try {
             socket = new DatagramSocket(port);
             System.out.println("Ready to receive...");
             while (!socket.isClosed()) {
-                receiveAndProcess();
+                receiveAndDisplay();
             }
         } catch (SocketException e) {
             throw new RuntimeException(e);
         }
-
     }
-    private void receiveAndProcess() {
+
+    /**
+     * Receives a datagram packet on the associated DatagramSocket, processes the received data,
+     * and prints the received message to the console.
+     *
+     * @throws RuntimeException if there is an error receiving or processing the datagram packet.
+     */
+    private void receiveAndDisplay() {
+        DatagramPacket receivePacket = new DatagramPacket(receive_buf, BUFF_SIZE);
         try {
-            DatagramPacket receivePacket = new DatagramPacket(receive_buf, BUFF_SIZE);
             socket.receive(receivePacket);
             byte[] receivedBytes = Arrays.copyOf(receivePacket.getData(), receivePacket.getLength());
             String receivedString = new String(receivedBytes, StandardCharsets.UTF_8);
             System.out.println("Received message: " + receivedString);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            System.err.println("Error: " + e.getMessage());
         }
     }
 
