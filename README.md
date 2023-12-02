@@ -138,5 +138,9 @@ The client uses a separate thread to read and print responses from the server, e
 
 You can modify the code to change the server address and port as needed.
 
-# Remark reagarding the chat part:
+# Overall Comments:
 We weren't able to implement a chat bot due to a lack of time and skills; however the overall objective of the app is indeed accomplished and the Client-Server communication is well established in the interface.
+
+In TCPClient_1, the code represents a basic interactive TCP client that sends user input to a server and continuously receives and prints messages from the server in a separate thread.
+
+In TCPClient, 
