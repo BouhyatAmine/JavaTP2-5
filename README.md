@@ -141,6 +141,6 @@ You can modify the code to change the server address and port as needed.
 # Overall Comments:
 We weren't able to implement a chat bot due to a lack of time and skills; however the overall objective of the app is indeed accomplished and the Client-Server communication is well established in the interface.
 
-In TCPClient_1, the code represents a basic interactive TCP client that sends user input to a server and continuously receives and prints messages from the server in a separate thread.
+In **TCPClient_1**, the code represents a basic interactive TCP client that sends user input to a server and continuously receives and prints messages from the server in a separate thread.
 
-In TCPClient, 
+In **TCPClient**, the code provides a basic foundation for a GUI-based TCP chat client in Java using Swing. Users can input messages, send them to the server, and view the received messages in the chat area. The communication with the server runs in a separate thread to avoid blocking the GUI.
