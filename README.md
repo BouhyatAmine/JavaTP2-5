@@ -24,7 +24,7 @@ This Java program implements a basic UDP (User Datagram Protocol) server. It lis
 2. Compile the Java program:
    ```bash
    javac UDPServer.java
-Run the server with a specified port (e.g., 8080):
+3. Run the server with a specified port (e.g., 8080):
    ```bash
    java UDPServer 8080
    ```
@@ -51,12 +51,12 @@ This Java program implements a simple UDP (User Datagram Protocol) client. It al
 2. Compile the Java program:
    ```bash
    javac UDPClient.java
-Run the client with the server address and port as command-line arguments:
+3. Run the client with the server address and port as command-line arguments:
    ```bash
    java UDPClient localhost 8080
    ```
 
-3.The client will prompt you to enter messages. Type a message and press Enter to send it to the server:
+4. The client will prompt you to enter messages. Type a message and press Enter to send it to the server:
    ```bash
    Please enter your messages here: Hello, UDP Server!
    ```
@@ -84,13 +84,12 @@ This Java program implements a simple TCP (Transmission Control Protocol) server
 1. Open a terminal or command prompt.
 
 2. Compile the Java program:
-
    ```bash
    javac TCPServer.java
-Run the server with a specified port (e.g., 8080):
-```bash
-java TCPServer 8080
-```
+3. Run the server with a specified port (e.g., 8080):
+   ```bash
+   java TCPServer 8080
+   ```
 
 The server will start listening for client connections. Each connected client can send messages to the server, and the server will print the received messages.
 
@@ -118,10 +117,11 @@ This Java program implements a simple TCP (Transmission Control Protocol) client
 
    ```bash
    javac TCPClient_1.java
-Run the client with the server address and port as command-line arguments:
-```bash
-java TCPClient_1 localhost 8080
-```
+3. Run the client with the server address and port as command-line arguments:
+   ```bash
+   java TCPClient_1 localhost 8080
+   ```
+   
 The client will connect to the server and prompt you to enter a message. Type a message and press Enter to send it to the server.
 
 The client will continuously receive and print responses from the server.
