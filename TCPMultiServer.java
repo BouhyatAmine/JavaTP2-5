@@ -58,7 +58,7 @@ public class TCPMultiServer {
      *             Usage: java TCPMultiServer <server_port>
      */
     public static void main(String[] args) {
-        if (args.length != 1) {
+        if (args.length > 1) {
             System.err.println("Usage: java TCPMultiServer <server_port>");
             System.exit(1);
         }

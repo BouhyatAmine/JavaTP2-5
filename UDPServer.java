@@ -69,7 +69,7 @@ public class UDPServer {
      *             Usage: java UDPServer <server_port>
      */
     public static void main(String[] args) {
-        if (args.length != 1) {
+        if (args.length > 1) {
             System.err.println("Usage: java UDPServer <server_port>");
             System.exit(1);
         }

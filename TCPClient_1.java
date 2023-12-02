@@ -60,23 +60,18 @@ public class TCPClient_1 {
      * @throws IOException if there is an error establishing a connection or sending/receiving messages.
      */
     public static void main(String[] args) throws IOException {
-        // Check if the correct number of command-line arguments is provided
         if (args.length != 2) {
             System.err.println("Usage: java TCPClient_1 <server_address> <server_port>");
             System.exit(1);
         }
 
         try {
-            // Parse command-line arguments
             String serverAddress = args[0];
             int serverPort = Integer.parseInt(args[1]);
-
-            // Create and launch the TCP client
             TCPClient_1 client = new TCPClient_1();
             client.send(InetAddress.getByName(serverAddress), serverPort);
 
         } catch (NumberFormatException e) {
-            // Handle the case where the provided port number is not a valid integer
             System.err.println("Error: Invalid port number.");
             System.exit(1);
         }

@@ -94,7 +94,7 @@ public class TCPServer {
      * @throws IOException if there is an error initializing or launching the TCP server.
      */
     public static void main(String[] args) throws IOException {
-        if (args.length != 1) {
+        if (args.length > 1) {
             System.err.println("Usage: java TCPServer <server_port>");
             System.exit(1);
         }
