@@ -22,9 +22,12 @@ This Java program implements a basic UDP (User Datagram Protocol) server. It lis
 1. Open a terminal or command prompt.
 
 2. Compile the Java program:
-
+   ```bash
+   javac TCPServer.java
+Run the server with a specified port (e.g., 8080):
    ```bash
    java UDPServer 8080
+   ```
 
 If no port is specified, the default port (8080) will be used.
 The server will start listening for UDP packets, and incoming messages will be printed to the console.
