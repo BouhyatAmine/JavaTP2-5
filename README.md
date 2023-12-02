@@ -117,9 +117,18 @@ This Java program implements a simple TCP (Transmission Control Protocol) client
 
    ```bash
    javac TCPClient_1.java
+With the GUI:
+```bash
+javac TCPClient.java
+```
+   
 3. Run the client with the server address and port as command-line arguments:
    ```bash
    java TCPClient_1 localhost 8080
+   ```
+   With the GUI:
+   ```bash
+   java TCPClient localhost 8080
    ```
    
 The client will connect to the server and prompt you to enter a message. Type a message and press Enter to send it to the server.
